@@ -1,0 +1,1341 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	margin: 0;
+	min-height: 1000px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+header{
+	overflow: hidden;
+	background: #ffffff;
+	box-shadow:0px 3px 5px 0px rgba(100, 100, 100, 0.49);
+	padding-top: 7px;
+	width: 100%;
+	position: relative;
+	z-index: 1;
+}
+
+header #HeaderLogoSpan{
+	float: left; 
+	width:30%;
+}
+
+/* logo image */
+
+header #HeaderLogoSpan img{
+	max-height:30px;
+}
+
+/* navigation bar */
+
+header #HeaderNavSpan{
+	width:40%;
+	display:inline-block;
+	float:left;
+}
+
+header #HeaderNavSpan a{
+	text-decoration: none;
+  	padding: 3px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+  	color: #65c7b3;
+  	text-align: center;
+  	font-size: 20px;
+}
+
+
+header #HeaderNavSpan p{
+	float: right;
+	padding-right: 5px;
+}
+
+header #HeaderNavSpan ul{
+	float:none;
+
+}
+
+header #HeaderNavSpan li{
+	float: left;
+	list-style-type: none;
+	padding-left: 2px;
+	border-right: 2px solid #65c7b3;
+}
+
+header #HeaderNavSpan li:last-child{
+	border-right: none;
+}
+
+header #HeaderNavSpan li:hover{
+	background-color: #65c7b3;
+	box-shadow: inset 1px 1px 1px 1px rgba(100, 100, 100, 0.49);
+}
+
+header #HeaderNavSpan a:hover{
+	color: #ffffff;
+}
+
+/* User Dropdown */
+
+header #HeaderUserSpan{
+	width:30%;
+	display: inline-block;
+	float:left;
+}
+
+#HeaderUserSpan button{
+	float: right;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #65c7b3;
+	background-color: #ffffff;
+	font-size: 20px;
+	border: none;
+  	text-align: center;
+  	padding: 5px;
+  	cursor: pointer;
+}
+
+#HeaderUserDropdownContent{
+    display: none;
+    position: fixed;
+    margin-top: 33px;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+#HeaderUserDropdownContent a{
+    color: #65c7b3;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#HeaderUserDropdownContent a:hover{
+	background-color: #f1f1f1;
+
+}
+
+#HeaderUserSpan:hover #HeaderUserDropdownContent{
+	display: block;
+}
+
+#HeaderUserSpan button:hover{
+	background-color: #65c7b3;
+	box-shadow: inset 1px 1px 1px 1px rgba(100, 100, 100, 0.49);
+	color: #ffffff;
+}
+/* My Week Dropdown feature*/
+
+#ArrowButtonDiv button{
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+	border:none;
+	background-color: #ffffff;
+	cursor: pointer;
+}
+
+#MyWeekDiv{
+	background-color: #444444;
+	height:150px;
+	display:none;
+}
+
+/* Footer*/
+
+#FooterDiv{
+	display: inline-block;
+	width: 100%;
+	min-height: 150px;
+	background-color: #444444;
+	color:#ffffff;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: center;
+	font-size: 14px;
+}
+
+.FooterDivSpan{
+	width:25%;
+	float: left;
+	min-height: 150px;
+}
+
+/* Login Page */ 
+
+.LoginKingDiv{
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 40px;
+	background-color: #ffffff;
+	border: 1px Solid rgba(68, 68, 68, 0.5);
+	width: 25%;
+	padding:10px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.LoginLogoDiv{
+	width: 100%;
+}
+
+.LoginLogoDiv img{
+	display: block;
+	margin:auto;
+}
+.LoginFormDiv{
+	width: 100%;
+	clear: both;
+	margin-top: 20px;
+}
+
+.LoginFormEdits{
+	width: 100%;
+}
+
+hr.LoginFormDividerLine {
+    margin-top: 5px;
+    border: 0;
+    height: 2px;
+    background: #65c7b3;
+    background-image: linear-gradient(to right, #ccc, #65c7b3, #ccc);
+}
+
+/* FORM */
+
+.LoginRegisterInputBox{
+	 /*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/         
+	width: 100%;
+	font-size: 20px;
+	padding-top:3px;
+	padding-left: 3px;
+	padding-bottom:3px;
+	margin-bottom: 10px;
+	border: 2px solid #65c7b3;
+}
+
+::placeholder {
+    color: #444444;
+    opacity: 0.4; 
+}
+
+/* Remember Me Button Style*/
+
+/* The container */
+
+.LoginRememberMeCheckBox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 17px;
+    margin-top: 2px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+
+.LoginRememberMeCheckBox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+
+.LoginRememberMeCheckmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #d3d3d3;
+}
+
+/* On mouse-over, add a  dark grey background color */
+
+.LoginRememberMeCheckBox:hover input ~ .LoginRememberMeCheckmark {
+    background-color: #444;
+}
+
+/* When the checkbox is checked, add a green background */
+
+.LoginRememberMeCheckBox input:checked ~ .LoginRememberMeCheckmark {
+    background-color: #65c7b3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.LoginRememberMeCheckmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+
+.LoginRememberMeCheckBox input:checked ~ .LoginRememberMeCheckmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.LoginRememberMeCheckBox .LoginRememberMeCheckmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* End of Remember Me Button*/
+
+.LoginSubmitButton{
+	width: 100%;
+	font-size: 20px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding: 5px;
+	text-transform: uppercase;
+	background-color: #444444;
+	color:#ffffff;
+	border:none;
+}
+
+.LoginSubmitButton:hover{
+	background-color: #174769;
+	cursor: pointer;
+}
+
+/* Bottom Links*/
+
+.LoginFormEdits{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.LoginFormEdits button{
+	width: 100%;
+	font-size: 20px;
+	margin-top: 25px;
+	margin-bottom: 5px;
+	padding: 5px;
+	text-transform: uppercase;
+	background-color: #65c7b3;
+	color:#000000;
+	border:none;
+}
+
+.LoginFormEdits button:hover{
+	background-color: #b1bbc7;
+	cursor: pointer;
+}
+
+/* REGISTER Page - note some parts adopt Login page CSS*/
+
+.RegisterKingDiv{
+	margin: auto;
+	max-height: 900px;
+	overflow-y:auto;
+	margin-top: 30px;
+	margin-bottom: 40px;
+	background-color: #ffffff;
+	border: 1px Solid rgba(68, 68, 68, 0.5);
+	width: 30%;
+	padding:10px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.RegisterFormDiv{
+	width: 100%;
+	clear: both;
+	margin-top: 20px;
+}
+
+/* this overrides the .LoginRegisterInputBox due to CSS specifity*/
+
+.RegisterFormDiv .RegisterFormDiv90 .LoginRegisterInputBox{
+	 /*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/         
+	width: 85%;
+	font-size: 20px;
+	padding-top:3px;
+	padding-left: 3px;
+	padding-bottom:3px;
+	margin-bottom: 10px;
+	border: 2px solid #65c7b3;
+}
+
+.RegisterInputBoxPostcode{
+	 /*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/         
+	width: 50%;
+	font-size: 16px;
+	text-transform: uppercase;
+	padding-top:3px;
+	padding-left: 3px;
+	padding-bottom:3px;
+	margin-bottom: 10px;
+	border: 2px solid #65c7b3;
+}
+
+.RegisterButtonFindPostcode{
+	border: none;
+	background-color: #444444;
+	color:#ffffff;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:  16px;
+	padding:3px;
+}
+
+.RegisterButtonFindPostcode:hover{
+	background-color: #65c7b3;
+	cursor: pointer;
+}
+
+#ShowPostcodeResults{
+	background-color: #d3d3d3;
+	height:80px;
+	display:none;
+}
+
+/* Register Page Selections */
+
+
+.RegisterPageSelections select:required:invalid {
+  color: #444444;
+}
+
+.RegisterPageSelections option[value=""][disabled] {
+  display: none;
+}
+
+.RegisterPageSelections option {
+  color: black;
+}
+
+.RegisterPageSelections select{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:  16px;
+	margin: 5px;
+}
+
+/* Register Check Boxes Button Style*/
+
+/* The container */
+
+.RegisterCheckBox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 2px;
+    margin-bottom: 12px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+
+.RegisterCheckBox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+
+.RegisterCheckmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #d3d3d3;
+}
+
+/* On mouse-over, add a  dark grey background color */
+
+.RegisterCheckBox:hover input ~ .RegisterCheckmark {
+    background-color: #444;
+}
+
+/* When the checkbox is checked, add a green background */
+
+.RegisterCheckBox input:checked ~ .RegisterCheckmark {
+    background-color: #65c7b3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.RegisterCheckmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+
+.RegisterCheckBox input:checked ~ .RegisterCheckmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.RegisterCheckBox .RegisterCheckmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* End of Register Button*/
+
+.RegisterSubmitButton{
+	width: 100%;
+	font-size: 20px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding: 5px;
+	text-transform: uppercase;
+	background-color: #444444;
+	color:#ffffff;
+	border:none;
+}
+
+.RegisterSubmitButton:hover{
+	background-color: #65c7b3;
+	cursor: pointer;
+}
+
+#RegisterLinkToLogin a{
+	text-decoration: none;
+	color: blue;
+}
+
+@import "compass/css3";
+
+.RegisterTick{
+	display:inline-block;
+	margin-left: 15px;
+	/*Make it a small rectangle so the border will create an L-shape*/
+	width: 6px;
+	height: 15px;
+
+	/*Add a green border on the bottom and left, creating that 'L' */
+	border: solid #65c7b3;
+	border-width: 0 3px 3px 0;
+
+	/*Rotate the L 45 degrees to turn it into a checkmark*/
+	transform: rotate(45deg);
+}
+
+
+/* MY PROFILE PAGE STYLE SHEET */
+
+
+.MyProfileLeftSpan{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	display: inline-block;
+	float:left;
+	background-color: #ffffff;
+	width:49.85%;
+	padding:10px 10px 25px 10px;
+	height: 100%;
+}
+
+.MyProfileRightSpan{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	display: inline-block;
+	float: left;
+	background-color: #ffffff;
+	width:49.85%;
+	padding:10px 10px 25px 10px;
+	height: 100%;
+}
+
+.MyProfileRightSpan a{
+	text-decoration: none;
+}
+
+.MyProfileDividerSpan{
+	display: inline-block;
+	float:left;
+	background-color: black;
+	width:0.3%;
+	height: 100%;
+}
+
+.MyProfileButton{
+	width: 80%;
+	margin-left: auto; 
+	margin-right: auto; 
+	margin-top: 30px;
+	min-height: 50px; 
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	/* Line Height Larger than Font Size and equal to div height to vertically align within the Button Div*/
+	line-height: 50px;
+	font-size:  25px;
+	color: #ffffff;
+}
+
+#MyProfileButton1{
+	background-color: #174769;
+}
+
+#MyProfileButton2{
+	background-color: #b1bbc7;
+}
+
+#MyProfileButton3{
+	background-color: #65c7b3;
+}
+
+#MyProfileButton4{
+	background-color: #444444;
+}
+
+#MyProfileButton5{
+	background-color: #65c7b3;
+}
+
+#MyProfileDetails{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	width: 100%;
+	height:500px;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+
+#MyProfileStats{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	width: 100%;
+	background-color: #65c7b3;
+	height: 300px;
+	padding: 20px;
+}
+
+#MyProfileDetailsDivider{
+	width:100%;
+	height: 3px;
+	background-color: #000000;
+	margin-bottom: 20px;
+}
+
+#MyProfileStats h5{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:  25px;
+	color: #ffffff;
+	text-align: center;
+	letter-spacing: 5px;
+}
+
+/* FROM HERE */ 
+
+.UserNameDiv{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	height: 10%;
+}
+
+.UserNameDiv p{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:  25px;
+	color: #000000;
+	margin:3px;
+	font-weight: bold;
+	letter-spacing: 3px;
+	display: inline-block;
+}
+
+.ProfileAndSocialLinks img{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	height: auto;
+	width: 100%;
+	display: block;
+	border: 1px solid black;
+}
+
+.ProfileAndSocialLinks{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	height: 35%;
+	padding: 5px;
+}
+
+.MyProfileDetailsInside{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	height:55%;
+	padding: 10px;
+	padding-top: 20px;
+}
+
+.MyProfileDetailsInside table{
+	border-collapse: collapse;
+}
+
+.MyProfileDetailsInside table, th, td{
+	text-align: left;
+	padding: 3px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:  15px;
+	color: #000000;
+}
+
+.EditSymbolMyProfile{
+	float: right;
+	display: inline;
+}
+
+.ProfileAndSocialLinksLeft{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	display: inline-block;
+	float: left;
+	width: 30%;
+}
+
+.ProfileAndSocialLinksRight{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	display: inline-block;
+	float: left;
+	width: 70%;
+	padding-left: 10px;
+}
+
+.ProfileSocialLinks{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	display:block;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+
+/* Inherits colour of the text within the div*/
+
+.ProfileSocialLinks svg{
+	 fill: currentColor;
+}
+
+#youtubeIcon{
+	color: red;
+}
+
+#instagramIcon{
+	color: #000000;
+} 
+
+#facebookIcon{
+	color: blue;
+}
+
+#snapchatIcon{
+	color: yellow;
+}
+
+#linkedinIcon{
+	color: #007bb5;
+}
+
+.StatsHeaderDiv{
+	height: 10%;
+}
+
+.StatsBoxesDiv{
+	height: 90%;
+	padding: 3px;
+}
+
+.StatsBoxesTopDiv{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	height: 50%;
+	padding: 2px;
+}
+
+.StatsBoxesBottomDiv{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	height:50%;
+	padding: 2px;
+}
+
+.StatsBoxSpan{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+    width: 33%;
+    height: 100%;
+    background-color: #ffffff;
+    display: inline-block;
+    float: left;
+    border: 4px solid #65c7b3;
+}
+
+/*/////// Meal Card - to avoid confusion with this code, a short description of whats going on: to prevent the issues 
+caused by having margin or borders, extra divs have been used.
+PLEASE NOTICE THE USE OF CLASSES: As this page will be replocated they were chosen to avoid errors that coudl be caused
+by just using ID's ///////*/
+
+.MealCardLeftSpan{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	display: inline-block;
+	float: left;
+	width: 30%;
+	height: 100%;
+	min-height: 600px;
+}
+
+
+.MealCardRightSpan{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	display: inline-block;
+	float: left;
+	width:70%;
+	height: 100%;
+	padding: 10px 20px 10px 20px;
+}
+
+.ActualRecipeDiv{
+	width: 100%;
+	height: 90%;
+	border: 1px solid #000000;
+}
+
+.MealCardRightSpanTagsDiv{
+	width: 100%;
+	height: 8%;
+	border: 1px solid #000000;
+	margin-top: 10px;
+}
+
+.MealCardTitleDiv{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	width: 100%;
+	height: 17%;
+	padding: 10px 20px 3px 20px;
+}
+
+.MealCardAuthorDiv{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	width: 100%;
+	height: 18%;
+	padding: 3px 20px 3px 20px;
+}
+
+.MealCardIngredientsDiv{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	width: 100%;
+	height: 65%;
+	background-color: #ffffff;
+	padding: 3px 20px 10px 20px;
+}
+
+.MealCardAuthorDivInner, .MealCardIngredientsDivInner{
+	border: 1px solid #000000;
+	height: 100%;
+	background-color: #ffffff;
+}
+
+.MealCardTitleDivInner{
+	height: 100%;
+} 
+
+.MealCardTitleDivInnerTop{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	height:60%;
+	width: 100%;
+	display: inline-block;
+	background-color: blue;
+	/* create feature to change font size based on number of character*/
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:  20px;
+	color: #000000;
+}
+
+.EditSymbolMealCard{
+	float: right;
+	display: inline;
+}
+
+/* PLUS BUTTON - IMPORTANT TO SORT OUT COLOURS FOR */
+
+.cssCircle {
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  border-radius: 999px;
+  float: left;
+  width: 35px;
+  height: 35px;
+  padding: 2px;
+  margin-left: 5px;
+  
+  background: #65c7b3;
+  color: #000000;
+  text-align: center;
+  -webkit-transition: background 0.5s linear;
+  -moz-transition: background 0.5s linear;
+  -ms-transition: background 0.5s linear;
+  -o-transition: background 0.5s linear;
+  transition: background 0.5s linear;
+  transition: color 0.5s linear;
+  
+  font: 30px Arial, sans-serif
+}
+
+.cssCircle:hover {
+  background: #006400;
+  cursor: pointer;
+}
+
+.minusSign {
+  line-height: 0.9em;
+  margin-bottom: 1px;
+}
+
+.plusSign {
+  line-height: 1.1em;
+}
+
+.minusSign:hover,
+.plusSign:hover {
+  color: white;
+}
+
+/* END OF ADD BUTTON */
+
+
+.MealCardTitleDivInnerMiddle{
+	height:20%;
+	background-color: pink;
+}
+
+/* Allergen Part */
+
+.MealCardTitleDivInnerBottom{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	height:20%;
+	background-color: white;
+}
+
+.MealCardTitleDivInnerBottomSectioned{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	display: inline-block;
+	float: left;
+	height: 100%;
+	width: 7.14%;
+	border: 1px solid white;
+}
+
+.CeleryIconDiv{
+	background: url(../Img/celeryIcon.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.DairyIconDiv{
+	background: url(../Img/dairyIcon.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.EggIconDiv{
+	background: url(../Img/eggIcon.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.FishIconDiv{
+	background: url(../Img/fishIcon.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.GlutenIconDiv{
+ 	background: url(../Img/glutenIcon.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.LupineIconDiv{
+ 	background: url(../Img/lupineIcon.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.MolluscaIconDiv{
+	background: url(../Img/molluscaIcon.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.MustardIconDiv{
+	background: url(../Img/mustardIcon.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.NutsIconDiv{
+	background: url(../Img/nutsIcon.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.PeanutIconDiv{
+	background: url(../Img/peanutIcon.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.SesameseedsIconDiv{
+	background: url(../Img/sesameseedsIcon.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.ShellfishIconDiv{
+	background: url(../Img/shellfishIcon.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.SoyIconDiv{
+	background: url(../Img/soyIcon.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.SulphurdioxideIconDiv{
+	background: url(../Img/sulphurdioxideIcon.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+/* END OF ALERGEN PART*/
+
+.MealCardTitleDivInnerTopTitle{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	display: inline-block;
+	float: left;
+	padding: 5px;
+	width:70%;
+	height: 100%;
+	text-align: center;
+	text-decoration: underline;
+	background-color: orange;
+}
+
+.MealCardTitleDivInnerTopButtons{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	display: inline-block;
+	float: left;
+	padding: 5px;
+	width: 30%;
+	height: 100%;
+	background-color: purple;
+}
+
+.MealCardAuthorSpanInnerLeft{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+    float: left;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    background-color: purple;
+}
+
+.MealCardAuthorSpanInnerRight{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+    float: left;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    padding-left: 5px;
+    background-color: orange;
+    padding: 4px;
+}
+
+.MealCardAuthorSpanInnerRightProfilePic{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	background-color: pink;
+	/* create feature to display profile picture of creator as background of div */
+}
+
+.MealCardAuthorSpanInnerLeftUpper{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	height: 25%;
+	width: 100%;
+	display: inline-block;
+	background-color: red;
+	padding: 3px 3px 0px 0px;
+	text-align: center;
+	overflow: hidden;
+	/* create feature to change font size based on number of character*/
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:  16px;
+	color: #000000;
+}
+
+.MealCardAuthorSpanInnerLeftLower{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+	height: 75%;
+	width: 100%;
+	display: inline-block;
+	background-color: green;
+}
+
+/* must create a hover feature for the follow button */
+
+.MealCardAuthorSpanInnerLeftLowerFollow{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+    display: inline-block;
+    width: 100%;
+    height: 33%;
+    border: 3px solid white;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:  22px;
+	color: #ffffff;
+	text-align: center;
+	padding: 2px;
+	background-color: #ADD8E6;
+}
+
+.MealCardAuthorSpanInnerLeftLowerNationAndFollowers{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+    display: inline-block;
+    width: 100%;
+    height: 33%;
+    border: 3px solid white;
+}
+
+.MealCardAuthorSpanInnerLeftLowerFollowers{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+    display: inline-block;
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-color: #ffffff;
+    padding:2px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:  18px;
+	color: #000000;
+}
+
+.MealCardAuthorSpanInnerLeftLowerNation{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+    display: inline-block;
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-color: pink;
+    /* create feature such that background image of this div become the flag of the nationality of the  creator*/ 
+}
+
+.MealCardAuthorSpanInnerLeftLowerSocialLinks{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+    display: inline-block;
+    width: 100%;
+    height: 33%;
+    border: 3px solid white;
+}
+
+.MealCardIngredientsDivInnerTitle{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+    display: inline-block;
+    float: left;
+    width: 100%;
+    height: 8%;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:  22px;
+	color: #000000;
+	text-align: center;
+	text-decoration: underline;
+    background-color: pink;
+}
+
+.MealCardIngredientsDivInnerIngredients{
+	/*The Following 3 lines fix the overflow issue caused by padding*/
+	 -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    /**/
+    display: inline-block;
+    float: left;
+    width: 100%;
+    height: 92%;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:  17px;
+	background-color: blue;
+	padding: 10px;
+}
+
+
+
+/* MEAL BOOK CODE */
+
