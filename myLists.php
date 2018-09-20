@@ -6,9 +6,7 @@
 <body>
 	<?php include_once 'Includes/header.php'; ?>
 	<!-- start main code here! -->
-
-		BIG DADDY LIST 
-		
+	
 	<div id="MyListsTopDiv">
 		<!-- Lists/weeks button + public personal toggle button + filter dropdown toggle button -->
 	</div>
