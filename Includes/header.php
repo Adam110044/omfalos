@@ -16,7 +16,7 @@
 				<div>
 					<span id="HeaderLogoSpan">
 						<!--LOGO Image-->
-						<a href="./index.php"><img src="./Img/logo.png" alt="Omfalos Logo"></a>
+						<img src="./Img/logo.png" alt="Omfalos Logo">
 					</span>
 					<span id="HeaderNavSpan">
 						<ul>
@@ -27,14 +27,30 @@
 							<li><a href="#"><span class="HeaderNavIcon"><?php include 'icons/buyIcon.php'; ?></span><p>BUY</p></a></li>
 						</ul>
 					</span>
-					<span id="HeaderUserSpan">
-						<button>USER &#9660;</button>
-						<!-- Dropdown menu written with CSS-->
-						<div id="HeaderUserDropdownContent">
-						    <a href="./login.php">Login</a>
-						    <a href="./register.php">Register</a>
-						</div>
-					</span>
+					<?php
+						$init_ind = 5;
+						if (isset($_SESSION['user_uid'])) {
+							$user_uid = $_SESSION['user_uid'];
+							echo '<span id="HeaderUserSpan">' . "\n";
+							echo str_repeat("    ", $init_ind+1) . '<button>' . $user_uid . ' &#9660;</button>' . "\n";
+							echo str_repeat("    ", $init_ind+1) . '<!-- Dropdown menu written with CSS-->' . "\n";
+							echo str_repeat("    ", $init_ind+1) . '<div id="HeaderUserDropdownContent">' . "\n";
+							echo str_repeat("    ", $init_ind+2) . '<a href="./myWeek.php">My Week</a>' . "\n";
+							// This line needs to log the user out -> discuss changing to button OR goto log out php script
+							echo str_repeat("    ", $init_ind+2) . '<a href="./Includes/logout_inc.php">Log out</a>' . "\n";
+							echo str_repeat("    ", $init_ind+1) . '</div>' . "\n";
+							echo str_repeat("    ", $init_ind) . '</span>' . "\n";
+						} else {
+							echo '<span id="HeaderUserSpan">' . "\n";
+							echo str_repeat("    ", $init_ind+1) . '<button>USER &#9660;</button>' . "\n";
+							echo str_repeat("    ", $init_ind+1) . '<!-- Dropdown menu written with CSS-->' . "\n";
+							echo str_repeat("    ", $init_ind+1) . '<div id="HeaderUserDropdownContent">' . "\n";
+							echo str_repeat("    ", $init_ind+2) . '<a href="./login.php">Login</a>' . "\n";
+							echo str_repeat("    ", $init_ind+2) . '<a href="./register.php">Register</a>' . "\n";
+							echo str_repeat("    ", $init_ind+1) . '</div>' . "\n";
+							echo str_repeat("    ", $init_ind) . '</span>' . "\n";
+						}
+					?>
 					
 				</div>
 				<div id="ArrowButtonDiv">
